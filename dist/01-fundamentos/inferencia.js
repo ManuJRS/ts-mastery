@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 // --- TEORÍA: INFERENCIA ---
 // Si inicializas una variable, TS "deduce" el tipo.
 let mensaje = "Hola Mundo"; // TS sabe que es string.
@@ -14,6 +12,7 @@ let mensaje = "Hola Mundo"; // TS sabe que es string.
 let count = 20;
 // count = "pepe" //el tipo string no es asignable al tipo number
 let colection = ["pedro", "pablo", "pepe"];
+export {};
 // colection.push(21) //el error dice "el argumento tipo number no es asignable al parametro tipo string"
 // --- REVISIÓN (tutor) ---
 // Línea count = "pepe": una vez el identificador es number (por anotación o por inferencia desde 20), asignar string viola asignabilidad: string no es asignable a number bajo strict.

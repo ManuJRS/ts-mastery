@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 // 1. Union Type
 // Declara una variable 'identificador' que pueda ser string O number.
 let identificador;
@@ -16,6 +14,7 @@ let luz = "rojo";
 function ajustarVolumen(nivel) {
     console.log(`Ajustando volumen a ${nivel}`);
 }
+export {};
 // ajustarVolumen(11)
 // Llama a la función con un valor válido y uno inválido para probar.
 //# sourceMappingURL=03-uniones.js.map

@@ -1,8 +1,6 @@
-"use strict";
 // --- TEORÍA RÁPIDA ---
 // TypeScript detecta errores antes de ejecutar el código.
 // Si intentas asignar un número a un string, el editor te avisará.
-Object.defineProperty(exports, "__esModule", { value: true });
 let nombre = "Tu Nombre";
 let edad = 25;
 let esEstudiante = true;
@@ -11,6 +9,7 @@ let esEstudiante = true;
 // Crea una variable 'estado' que pueda ser string O null (Usa el pipe | para unir tipos).
 const points = 20;
 let status = "activo";
+export {};
 // --- REVISIÓN (tutor) ---
 // Tipos: lo anotado es correcto con strict: true; no hay any.
 // Enunciado pedía nombres 'puntos' y 'estado'; usar points/status es válido para TS, pero no coincide con los nombres del ejercicio ni con el estilo en español del resto del archivo.
