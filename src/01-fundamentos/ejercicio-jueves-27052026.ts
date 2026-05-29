@@ -28,10 +28,9 @@ type SuscripciónProcesada = {
 }
 
 const procesarSuscripciones = (arraySuscripcion: SuscripcionBruta[]): SuscripciónProcesada[] => {
-    // TS validará automáticamente que devolvamos un SuscripciónProcesada[] sin usar "as"
     return arraySuscripcion.map(suscripcion => {
         
-        // 1. Calculamos el acceso
+
         const tieneAcceso = suscripcion.plan === 'premium' || suscripcion.plan === 'family';
 
         // 2. Calculamos el costo base
