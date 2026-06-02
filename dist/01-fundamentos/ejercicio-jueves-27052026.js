@@ -1,8 +1,6 @@
 // Crea estos dos tipos o interfaces en tu archivo:
 const procesarSuscripciones = (arraySuscripcion) => {
-    // TS validará automáticamente que devolvamos un SuscripciónProcesada[] sin usar "as"
     return arraySuscripcion.map(suscripcion => {
-        // 1. Calculamos el acceso
         const tieneAcceso = suscripcion.plan === 'premium' || suscripcion.plan === 'family';
         // 2. Calculamos el costo base
         let costoBase = suscripcion.plan === 'free' ? 0
