@@ -7,3 +7,15 @@
 // (Pista: usa .split('@') y .substring()).
 
 const correos = ["juan.perez@gmail.com", "ana@outlook.com"];
+
+
+const ofuscarCorreos = (correos:string[]):string[] => {
+    const usuarios = correos.map(correo => {
+        const partes = correo.split('@')
+        return partes[0]?.substring(0,3) + '***@' + partes[1]
+    });
+    return usuarios as string[];
+};
+
+console.log(ofuscarCorreos(correos));
+
