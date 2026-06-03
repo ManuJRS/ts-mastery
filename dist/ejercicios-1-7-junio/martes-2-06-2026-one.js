@@ -5,5 +5,9 @@
 // Misión: Usa .map() para convertir cada título a minúsculas y reemplazar los espacios
 // por guiones medios (puedes usar .replace(/ /g, "-")). Ejemplo: "curso-de-ts".
 const titulos = ["Curso de TS", "Aprende Map", "Estructura de Datos"];
+const formater = (text) => {
+    return text.map(texto => texto.toLocaleLowerCase().replace(/\s+/g, '-'));
+};
+console.log(formater(titulos));
 export {};
 //# sourceMappingURL=martes-2-06-2026-one.js.map

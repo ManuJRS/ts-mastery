@@ -6,3 +6,11 @@
 // por guiones medios (puedes usar .replace(/ /g, "-")). Ejemplo: "curso-de-ts".
 
 const titulos = ["Curso de TS", "Aprende Map", "Estructura de Datos"];
+
+const formater = (text:string[]):string[] => {
+     return text.map(texto => texto.toLocaleLowerCase().replace(/\s+/g, '-'))
+}
+
+console.log(formater(titulos))
+
+
