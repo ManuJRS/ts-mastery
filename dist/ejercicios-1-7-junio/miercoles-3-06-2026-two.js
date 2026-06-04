@@ -7,5 +7,17 @@
 // de progreso y añada una propiedad llamada estado que sea un tipo literal:
 // 'pendiente' | 'en-progreso' | 'completada'.
 // Debes calcular el string del estado según el porcentaje (0 = pendiente, 1 a 99 = en-progreso, 100 = completada).
+const transformar = (array) => {
+    const nuevaTask = array.map(task => {
+        return Object.assign(Object.assign({}, task), { estado: task.progreso === 0 ? 'pendiente' : task.progreso >= 1 && task.progreso <= 99 ? 'en-progreso' : 'completado' });
+    });
+    return nuevaTask;
+};
+const tareas = [
+    { id: 1, actividad: 'Tarea 1', progreso: 0 },
+    { id: 2, actividad: 'Tarea 2', progreso: 50 },
+    { id: 3, actividad: 'Tarea 3', progreso: 100 },
+];
+console.log(transformar(tareas));
 export {};
 //# sourceMappingURL=miercoles-3-06-2026-two.js.map
