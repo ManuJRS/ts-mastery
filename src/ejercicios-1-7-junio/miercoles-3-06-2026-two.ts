@@ -19,3 +19,23 @@ type TareaEstado = {
     actividad: string;
     estado: 'pendiente' | 'en-progreso' | 'completada';
 };
+
+const transformar = (array:Tarea[]):TareaEstado[] => {
+    const nuevaTask = array.map(task => {
+        return {
+            ...task,
+            estado: task.progreso === 0 ? 'pendiente' : task.progreso >= 1 && task.progreso <= 99 ? 'en-progreso' : 'completado'  
+        }
+    })
+    return nuevaTask as TareaEstado[]
+}
+
+const tareas:Tarea[] = [
+    { id: 1, actividad: 'Tarea 1', progreso: 0 },
+    { id: 2, actividad: 'Tarea 2', progreso: 50 },
+    { id: 3, actividad: 'Tarea 3', progreso: 100 },
+]
+
+console.log(transformar(tareas))
+
+
