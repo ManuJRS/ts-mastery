@@ -5,5 +5,15 @@
 // Misión: Transfórmalo en un array de booleans (boolean[]) donde sea true si la temperatura
 // supera los 30 grados (alerta de calor) y false si no.
 const temperaturas = [15, 36, 22, 40, 12];
+const isMayor = (temp) => {
+    const temperatura = temp.map(t => {
+        if (t > 30) {
+            return `${t}: ALERTA DE CALOR`;
+        }
+        return false;
+    });
+    return temperatura;
+};
+console.log(isMayor(temperaturas));
 export {};
 //# sourceMappingURL=miercoles-3-06-2026-one.js.map
