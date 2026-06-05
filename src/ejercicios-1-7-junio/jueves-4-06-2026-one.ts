@@ -10,3 +10,19 @@ type Usuario = {
     username: string;
     token: string;
 };
+
+const arrayId = (arrayIdUser:Usuario[]):number[] => {
+    const newArray = arrayIdUser.map(ids => {
+        return ids.id
+    })
+    return newArray
+}
+
+
+const arrayIdUser:Usuario[] = [
+    {id:1, username:"pepe", token:"1234567890"},
+    {id:2, username:"jose", token:"1234567890"},
+    {id:32, username:"carlos", token:"1234567890"},
+]
+
+console.log(arrayId(arrayIdUser))
