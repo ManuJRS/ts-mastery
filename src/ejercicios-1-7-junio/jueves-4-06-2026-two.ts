@@ -19,3 +19,26 @@ type ClientePlano = {
     id: number;
     nombreCompleto: string;
 };
+
+
+
+const jsonResponse = (cliente:ClienteBruto[]):ClientePlano[] => {
+    const newClientResponse = cliente.map((clien) => ({
+                id: clien.llave_id,
+        nombreCompleto:  `${clien.info_personal.nombre} ${clien.info_personal.apellido}`
+    }));
+
+    return newClientResponse
+}
+
+const clientes:ClienteBruto[] = [
+    {
+        info_personal: {
+            nombre: "Luis",
+            apellido: "Gomez"
+        },
+        llave_id: 45
+    }
+]
+
+console.log(jsonResponse(clientes))
