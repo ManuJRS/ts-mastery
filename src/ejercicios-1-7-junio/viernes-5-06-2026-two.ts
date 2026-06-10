@@ -16,3 +16,21 @@ type EventoUI = {
     diasRestantes: number;
     esEstaSemana: boolean;
 };
+
+
+const interfaz = (evento:Evento[]):EventoUI[] => {
+    const nuevoEvento = evento.map(event => {
+        const fecha = new Date()
+        const fechaActual = fecha.toISOString()
+        const dias = Math.ceil((new Date(event.fechaISO).getTime() - new Date(fechaActual).getTime()) / (1000 * 60 * 60 * 24));
+        return {
+            ...event,
+            diasRestantes: dias,
+            esEstaSemana: dias >= 0 && dias <= 7 ? true: false
+        }
+    })
+
+    return nuevoEvento as EventoUI[]
+}
+
+console.log(interfaz([{nombre: 'Evento 1', fechaISO: '2026-06-12'}, {nombre: 'Evento 2', fechaISO: '2026-06-25'}]))
