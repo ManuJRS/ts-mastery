@@ -5,4 +5,13 @@
 // Misión: Devuelve un nuevo array sumándole el 10% de propina a cada cuenta.
 // Asegúrate de redondear el resultado a dos decimales.
 
-const consumos = [150, 420, 80, 230];
+const consumos:number[] = [150, 420, 80, 230];
+
+const sumaPropina = (mesas:number[]):number[] => {
+    const calcularPropinas = mesas.map(consumo => {
+        return (consumo * .10) + consumo
+    })
+    return calcularPropinas
+}
+
+console.log(sumaPropina(consumos))
